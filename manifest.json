@@ -1,0 +1,18 @@
+{
+   "background_page": "html/background.html",
+   "content_scripts": [ {
+      "js": [ "lib/browser_wrapper.js", "lib/codewired.js", "lib/jquery-1.5.min.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Automatically get the lowest price on whatever you\u2019re buying",
+   "icons": {
+      "128": "images/logo128.png",
+      "16": "images/logo16.png",
+      "32": "images/logo32.png",
+      "48": "images/logo48.png"
+   },
+   "name": "Price Scraper",
+   "permissions": [ "tabs", "http://*/", "https://*/" ],
+   "version": "0.0.1"
+}
