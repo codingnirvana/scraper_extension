@@ -3,7 +3,7 @@
    "content_scripts": [ {
       "js": [ "lib/browser_wrapper.js", "lib/codewired.js", "lib/jquery-1.5.min.js" ],
       "matches": [ "http://*/*", "https://*/*" ],
-      "run_at": "document_start"
+      "run_at": "document_end"
    } ],
    "description": "Automatically get the lowest price on whatever you\u2019re buying",
    "icons": {
@@ -13,6 +13,7 @@
       "48": "images/logo48.png"
    },
    "name": "Price Scraper",
-   "permissions": [ "tabs", "http://*/", "https://*/" ],
+   "permissions": [ "tabs", "notifications", "http://*/", "https://*/" ],
+   "content_security_policy": "script-src 'self'; img-src 'self'",
    "version": "0.0.1"
 }
